@@ -55,7 +55,7 @@ const car = {
 
 // Load car image
 const carImage = new Image();
-carImage.src = "./Images/carPng.png";
+carImage.src = "./Images/CarPng.png";
 
 // Preload obstacle images (for variety, obstacles may still use these images)
 const obstacleSources = [
