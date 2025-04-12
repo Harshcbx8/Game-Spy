@@ -1,0 +1,156 @@
+/* Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  body {
+    background: #C4D9FF;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Heading */
+  h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  /* Container for Centering the Game Board */
+  .container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Game Board Grid */
+  .game {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vmin;
+    justify-content: center;
+    align-items: center;
+    width: 60vmin;
+    height: 60vmin;
+  }
+  
+  /* Box Styles */
+  .box {
+    font-size: 5rem;
+    width: 18vmin;
+    height: 18vmin;
+    border: none;
+    border-radius: 0.5rem;
+    background: #fff;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s, border 0.2s;
+  }
+  
+  .box:hover {
+    border: 2px solid #C4D9FF;
+    transform: scale(1.03);
+  }
+  
+  /* Reset and New Game Button Styles */
+  .reset,
+  #new-game {
+    font-size: 1.3rem;
+    background: #E8F9FF;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    margin: 1rem auto;
+    display: block;
+  }
+  
+  .reset:hover,
+  #new-game:hover {
+    background-color: #C4D9FF;
+  }
+  
+  /* Winning Overlay Styles */
+  .winning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(196, 217, 255, 0.50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 10;
+  }
+  
+  #msg {
+    font-size: 2rem;
+    color: #000;
+  }
+  
+  /* Hide Utility */
+  .hide {
+    display: none;
+  }
+  
+  /* Responsive Styles */
+  
+  /* Medium Devices */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+    
+    .game {
+      width: 80vmin;
+      height: 80vmin;
+      gap: 1vmin;
+    }
+    
+    .box {
+      font-size: 4rem;
+      width: 24vmin;
+      height: 24vmin;
+    }
+    
+    .container {
+      height: auto;
+      padding: 1rem 0;
+    }
+  }
+  
+  /* Small Devices */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.75rem;
+    }
+    
+    .game {
+      width: 90vmin;
+      height: 90vmin;
+      gap: 1vmin;
+    }
+    
+    .box {
+      font-size: 3rem;
+      width: 28vmin;
+      height: 28vmin;
+    }
+    
+    .reset,
+    #new-game {
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+  }
+  

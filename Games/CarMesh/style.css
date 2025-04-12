@@ -1,0 +1,88 @@
+/* Global Reset and base settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Top UI panel */
+#ui {
+  width: 100%;
+  padding: 0.5rem;
+  background: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#scoreboard {
+  display: flex;
+  gap: 1rem;
+  font-size: 1rem;
+}
+#scoreboard span {
+  margin: 0 0.5rem;
+}
+#pauseBtn {
+  padding: 0.5rem 1rem;
+  background: #ffb703;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Game container & responsive canvas */
+.game-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+canvas {
+  width: 100%;
+  height: auto;
+  background: #333;
+  display: block;
+  border: 3px solid #444;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  /* The canvas aspect ratio is maintained by JS resizing */
+}
+
+/* Mobile on-screen controls */
+#mobileControls {
+  display: none; /* hidden on desktop */
+  margin: 1rem auto;
+  text-align: center;
+}
+#mobileControls button {
+  background: #ffb703;
+  border: none;
+  border-radius: 5px;
+  color: #111;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.horiz-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Show mobile controls on smaller screens */
+@media (max-width: 768px) {
+  #mobileControls {
+    display: block;
+  }
+}

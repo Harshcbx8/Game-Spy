@@ -1,0 +1,203 @@
+/* Reset and global settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #11061e;
+    color: #f0f0f0;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 1rem;
+  }
+  
+  /* Header styling with a gaming neon touch */
+  header {
+    background-color: #5bff9f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header img {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .start {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .start img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+  
+  nav.section {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  nav.section a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #11061e;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  nav.section a:hover {
+    color: #5900ff;
+  }
+  
+  /* Search bar and sidebar icons */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 0.5rem;
+  }
+  
+  .search-bar input {
+    border: 2px solid #A294F9;
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    background-color: #300759;
+    color: #f0f0f0;
+  }
+  
+  .search-bar i:hover {
+    transform: scale(1.1);
+    transition: all linear 0.2s;
+    cursor: pointer;
+  }
+  
+  .sidebar {
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  
+  /* Animated background image styling */
+  .gameField {
+    position: relative;
+    height: 10rem;
+    width: 100%;
+    border-top: 2px solid blueviolet;
+    border-bottom: 2px solid blueviolet;
+    overflow: hidden;
+  }
+  
+  .gameField img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: bgAnimation 20s ease-in-out infinite alternate;
+  }
+  
+  /* Keyframes for slow scale in/out and subtle translate animation */
+  @keyframes bgAnimation {
+    0% {
+      transform: scale(1) translate(0, 0);
+    }
+    50% {
+      transform: scale(1.1) translate(5%, 5%);
+    }
+    100% {
+      transform: scale(1) translate(0, 0);
+    }
+  }
+  
+  /* Game menu grid styling */
+  menu {
+    width: 80vw;
+    height: 80vh;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  menu .game {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  menu .game:hover {
+    transform: scale(1.02);
+  }
+  
+  menu img {
+    border: 2px solid violet;
+    border-radius: 0.5rem;
+    width: 100%;
+    /* height: 150px; */
+    object-fit: cover;
+  }
+  
+  menu .game a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    font-weight: 700;
+    height: 100%;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    header {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    
+    nav.section {
+      width: 100%;
+      justify-content: space-around;
+    }
+    
+    .search-bar {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    menu {
+      width: 95vw;
+      height: auto;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h2 {
+      font-size: 1.2rem;
+    }
+    
+    nav.section a {
+      font-size: 1rem;
+    }
+    
+    .sidebar {
+      font-size: 1.5rem;
+    }
+    
+    .search-bar i {
+      font-size: 1.2rem;
+    }
+  }
+  

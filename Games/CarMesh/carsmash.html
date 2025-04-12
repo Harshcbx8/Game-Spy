@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game-Spy Car Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- UI Panel with Score, Distance, Stage and Pause Button -->
+  <div id="ui">
+    <div id="scoreboard">
+      <span id="score">Score: 0</span>
+      <span id="distance">Distance: 0 m</span>
+      <span id="stage">Stage: 1</span>
+    </div>
+    <button id="pauseBtn">Pause</button>
+  </div>
+
+  <!-- Game container with canvas -->
+  <div class="game-container">
+    <canvas id="gameCanvas"></canvas>
+  </div>
+
+  <!-- On-screen controls for mobile -->
+  <div id="mobileControls">
+    <button id="upBtn">▲</button>
+    <div class="horiz-controls">
+      <button id="leftBtn">◀</button>
+      <button id="stopBtn">■</button>
+      <button id="rightBtn">▶</button>
+    </div>
+    <button id="downBtn">▼</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
